@@ -16,6 +16,8 @@ if (!$HF_KEY) {
     echo json_encode(["error" => "missing HF_KEY"]);
     exit;
 }
+echo "HF_KEY = " . ($HF_KEY ? "✅ détectée" : "❌ manquante");
+exit;
 
 $input = json_decode(file_get_contents("php://input"), true);
 
