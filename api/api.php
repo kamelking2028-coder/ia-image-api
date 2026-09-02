@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
     exit;
 }
 
-$config = include("config.php");
+$config = include("../config.php");
 $HF_KEY = $config["HF_KEY"] ?? null;
 
 if (!$HF_KEY) {
