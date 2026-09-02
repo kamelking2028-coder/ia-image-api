@@ -12,8 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
 
 $config = include("config.php");
 $HF_KEY = $config["HF_KEY"] ?? null;
-echo "HF_KEY = " . ($HF_KEY ? "✅ détectée" : "❌ manquante");
-exit;
 
 if (!$HF_KEY) {
     echo json_encode(["error" => "missing HF_KEY"]);
